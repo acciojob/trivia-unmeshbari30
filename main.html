@@ -19,27 +19,10 @@
 <input type="radio" id="mumbai" value="mumbai" name="options">
 <label for="mumbai">Mumbai</label>
 
-<blockquote id="info" style="display: none;">
+<blockquote id="info" cite ="https://en.wikipedia.org/wiki/New_Delhi"
+	>
   New Delhi is the capital of India and an administrative district of NCT Delhi
 </blockquote>
-
-<script>
-  // Get elements
-  const delhiRadio = document.getElementById("delhi");
-  const blockquote = document.getElementById("info");
-
-  // Add event listener
-  document.querySelectorAll("input[name='options']").forEach(radio => {
-    radio.addEventListener("change", () => {
-      if (delhiRadio.checked) {
-        blockquote.style.display = "block";
-      } else {
-        blockquote.style.display = "none";
-      }
-    });
-  });
-</script>
-
 
 </body>
 
