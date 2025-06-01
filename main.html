@@ -12,16 +12,34 @@
 </script>
 
 	<h2>What is the capital of India?</h2>
-	<input type="radio" value="new_delhi" name="options">
-	<label>New Delhi</label></br>
-	<input type="radio" value="mumbai" name="options">
-	<label>Mumbai</label>
 
-	<blockquote id="info" style="display: none;">
-		New Delhi is the capital of India and an administrative district of NCT Delhi
-		
-	</blockquote>
-	
+<input type="radio" id="delhi" value="new_delhi" name="options">
+<label for="delhi">New Delhi</label><br>
+
+<input type="radio" id="mumbai" value="mumbai" name="options">
+<label for="mumbai">Mumbai</label>
+
+<blockquote id="info" style="display: none;">
+  New Delhi is the capital of India and an administrative district of NCT Delhi
+</blockquote>
+
+<script>
+  // Get elements
+  const delhiRadio = document.getElementById("delhi");
+  const blockquote = document.getElementById("info");
+
+  // Add event listener
+  document.querySelectorAll("input[name='options']").forEach(radio => {
+    radio.addEventListener("change", () => {
+      if (delhiRadio.checked) {
+        blockquote.style.display = "block";
+      } else {
+        blockquote.style.display = "none";
+      }
+    });
+  });
+</script>
+
 
 </body>
 
